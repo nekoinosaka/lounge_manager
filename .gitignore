@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+.python-version
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# Database
+*.db
+*.sqlite
+*.db-journal
+
+# Environment
+.env
+.env.local
+.env.development
+.env.production
+
+# Build/Test
+dist/
+build/
+*.egg-info/
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Logs
+*.log
+*.log.*
+
+# OS generated
+.DS_Store
+.DS_Store?
+Thumbs.db
