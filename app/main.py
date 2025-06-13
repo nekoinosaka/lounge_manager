@@ -4,7 +4,13 @@ from app.routers import beverage
 from app.routers import staff   
 from app.routers import order
 from app.routers import customer   
-app = FastAPI()
+app = FastAPI(
+    title="LoungeManage",
+    description="Custom Swagger Documentation",
+    version="1.0.0",
+    openapi_url="/api/v1/openapi.json",  # 可选，自定义OpenAPI路径
+    docs_url="/docs"  # 可选，自定义文档路径
+)
 
 # 创建表
 Base.metadata.create_all(bind=engine)
