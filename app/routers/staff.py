@@ -5,7 +5,7 @@ from app.database import get_db
 from app.schemas.staff import StaffCreate, StaffOut, StaffUpdate
 from app.crud import staff as crud
 
-router = APIRouter(prefix="/staff", tags=["Staff"])
+router = APIRouter(prefix="/staffs", tags=["Staff"])
 
 @router.post("/", response_model=StaffOut)
 def create_staff(staff: StaffCreate, db: Session = Depends(get_db)):
