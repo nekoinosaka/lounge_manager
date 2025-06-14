@@ -34,3 +34,9 @@ def delete_beverage(beverage_id: int, db: Session = Depends(get_db)):
     if not success:
         raise HTTPException(status_code=404, detail="Beverage not found")
     return {"message": "Beverage deleted successfully"}
+@router.delete("/logicalDelete/{beverage_id}")
+def logical_delete_beverage(beverage_id: int, db: Session = Depends(get_db)):
+    success = crud.logical_delete_beverage(db, beverage_id)
+    if not success:
+        raise HTTPException(status_code=404, detail="Beverage not found")
+    return {"message": "Beverage deleted successfully"}

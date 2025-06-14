@@ -11,4 +11,4 @@ class Beverage(Base):
     price = Column(Float, nullable=False)
     stock = Column(Integer, nullable=False)
     description = Column(String)
-    is_available = Column(Integer, default=1)
+    is_deleted = Column(Integer, default=False)

@@ -8,6 +8,7 @@ class BeverageBase(BaseModel):
     stock: int
     description: Optional[str] = None
     is_available: Optional[int] = 1
+    is_deleted: Optional[bool] = False
 
 class BeverageCreate(BeverageBase):
     pass
@@ -19,6 +20,7 @@ class BeverageUpdate(BaseModel):
     stock: Optional[int] = None
     description: Optional[str] = None
     is_available: Optional[int] = None
+    is_deleted: Optional[int] = None
 
 class BeverageOut(BeverageBase):
     id: int
